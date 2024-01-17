@@ -35,18 +35,18 @@ variable "node_instance_type_gpu" {
 variable "node_disk_size_cpu" {
   description = "The disk size of a cpu node."
   type        = string
-  default     = 50
+  default     = 100
 }
 
 variable "node_disk_size_gpu" {
   description = "The disk size of a gpu node."
   type        = string
-  default     = 75
+  default     = 150
 }
 
 variable "use_rds" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "use_s3" {
