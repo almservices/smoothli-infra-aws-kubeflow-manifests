@@ -27,8 +27,8 @@ locals {
   managed_node_group_cpu = {
     node_group_name = "managed-ondemand-cpu"
     instance_types  = [var.node_instance_type]
-    min_size        = 5
-    desired_size    = 5
+    min_size        = 3
+    desired_size    = 3
     max_size        = 10
     disk_size       = var.node_disk_size_cpu
     subnet_ids      = module.vpc.private_subnets
@@ -156,6 +156,7 @@ module "eks_blueprints_kubernetes_addons" {
   }
 
   enable_aws_load_balancer_controller = true
+  enable_karpenter                    = true
   enable_cert_manager                 = true
 
   cert_manager = {
