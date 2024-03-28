@@ -156,7 +156,6 @@ module "eks_blueprints_kubernetes_addons" {
   }
 
   enable_aws_load_balancer_controller = true
-  enable_karpenter                    = true
   enable_cert_manager                 = true
 
   cert_manager = {
